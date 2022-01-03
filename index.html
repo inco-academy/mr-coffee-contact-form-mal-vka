@@ -5,18 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your place, your coffee</title>
-    <link rel="icon" href="assets/logo_dark.png">
-    @font-face {
-        font-family: AvenirNext--regular;       
-        src:url(assets/avenir-next/AvenirNextLTPro-Regular.otf)        
-    }
-    @font-face {
-        font-family: AvenirNext--bold;       
-        src:url(assets/avenir-next/AvenirNextLTPro-Bold.otf)        
-    }
+    <link rel="icon" href="assets/logo_dark.png">    
     <link rel="stylesheet" href="application.css">
 </head>
-<body>    
+
+<body>
+
     <header class="header">        
         <div class="header__inner">
             <div class="header__logo">
@@ -50,9 +44,46 @@
         <h1 class="main__header">
             <img class="main__header--img" src="assets/logo_mrcoffee.png">
         </h1>
+        <div class="main__invitation">
+            <img class="main__invitation--img" src="assets/mr_coffee_salle.jpg" alt="intérieur de la salle du café">
+        </div>
         
-    
-        AAA
+        <h2 class="main__presentationHeader">Chez Mr.Coffee,<br>
+            nous aimons trois choses</h2>
+        <div class="main__presentationContent">
+            <ul class="main__presentationList">
+                <li class="main__presentationList--item">
+                    <img class="main__presentationList--img" src="assets/icon_café.png">
+                    <h3 class="main__presentationList--header">Le bon café</h3>
+                    <p class="main__presentationList--paragraph">Nos priorités : la qualité et le goût.
+                        Tous nos cafés sont soigneusements
+                        séléctionnés en accord avec nos
+                        valeurs de respect de la nature et des
+                        hommes.</p>
+                </li>
+                <li class="main__presentationList--item">
+                    <img class="main__presentationList--img" src="assets/icon_gens.png">
+                    <h3 class="main__presentationList--header">Les gens</h3>
+                    <p class="main__presentationList--paragraph">Nous sommes de ceux qui pensent
+                        qu’ensemble, nous allons plus loin.
+                        C’est pourquoi chez Mr.Coffee, notre
+                        mission est de rassembler les gens en
+                        leur offrant un lieu de liberté et de
+                        partages.</p>
+                </li>
+                <li class="main__presentationList--item">
+                    <img class="main__presentationList--img" src="assets/icon_gens.png">
+                    <h3 class="main__presentationList--header">Les histoires</h3>
+                    <p class="main__presentationList--paragraph">Chez Mr.Coffee, que vous soyez
+                        poête, fantasque ou philosophe, nous
+                        vous offrons un lieu pour parler de
+                        vos histoires, ou pour les écrire.</p>
+                </li>
+            </ul>
+            <button class="main__presentation--moreButton">En savoir plus</button>
+        </div>
+        
+        <h2 class="main__events">Découvrez notre progamme</h2>
     </main>
 
     <footer class="footer">
@@ -64,7 +95,7 @@
             </div>
             <div class="footer__socialMedia">
                 <p class="footer__socialMedia--header">
-                    Suivez nous sur les réseaux sociaux !
+                    Suivez nous sur les réseaux sociaux&nbsp;!
                 </p>
                 <ul class="footer__socialMediaList">
                     <li class="footer__socialMediaList--item">
@@ -86,5 +117,7 @@
             </div>
         </div>
     </footer>
+
 </body>
+
 </html>
