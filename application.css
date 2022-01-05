@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -11,20 +13,43 @@
     src:url("assets/avenir-next/AvenirNextLTPro-Bold.otf")        
 }
 
-body {
-    background-color: #f5f5f5ff;
+body {    
     --color-frame: #6a7b8bff;
     --color-inner: #bac1c8ff;
-    font-size: 18px;
+    --color-fontOnDarkBackground: white;
+    --color-fontOnLightBackground: #5c5b5bff;
+    color: var(--color-fontOnLightBackground);
+    background-color: #f5f5f5ff;    
     font-family: "AvenirNext--regular", sans-serif;    
-    letter-spacing: 2px;
+    margin: 0;    
+}
+
+h1 {
     margin: 0;
+}
+
+h2 {
+    font-family: "AvenirNext--bold", sans-serif;   
+    font-size: 34px;
+    text-align: center;    
+    margin: 100px auto 50px;
 }
 
 .link {
     text-decoration: none;
-    color: white;
+    color: var(--color-fontOnDarkBackground);
 }
+
+.link--onLightBackground {    
+    color: var(--color-fontOnLightBackground);
+}
+
+.link:hover {
+    text-decoration: underline;            
+}
+
+
+/* HEADER */
 
 header {
     background-color: var(--color-frame);
@@ -33,11 +58,13 @@ header {
     left: 0;
     right: 0;
     padding: 15px 50px;    
+    letter-spacing: 2px;
+    font-size: 14px;
 }
 
 .header__inner {
     margin: 0 auto; 
-    max-width: 1400px;
+    max-width: 1200px;
     display: grid;    
     grid-template-columns: repeat(2, auto);
     grid-gap: 50px;
@@ -48,13 +75,13 @@ header {
 @media(max-width: 700px) {
     .header__inner {
         grid-template-columns: 1fr;        
-        justify-content: center;           
-        margin: 20px auto 0;        
+        justify-content: center; 
+        grid-gap: 20px;
     }
 }
 
-.header__logo--img {
-    width: 200px; 
+.header__img {
+    width: 150px; 
     display: block;
     margin: 0 auto;       
 }
@@ -67,63 +94,234 @@ header {
     margin: 0;
     padding: 0;
     list-style: none;
-    align-items: center;    
+    align-items: center;        
+}
+
+@media(max-width: 600px) {
+    .header__navList {
+        grid-template-columns: repeat(3, 1fr);                         
+    }
 }
 
 @media(max-width: 500px) {
     .header__navList {
         grid-template-columns: 1fr;
         justify-content: center;
-        grid-gap: 20px;           
+        grid-gap: 10px;           
     }
 }
 
-.header__navList--item {    
+.header__navListItem {    
     text-align: center;    
 }
 
+
+/* MAIN */
+
 main {
-    width: 80%;
+    /* width: 100%; */
     max-width: 1000px;      
     margin: 0 auto;    
 }
 
-.main__header {
+/* .main__header {
+    width:100%;
     margin: 0 auto;
-}
+} */
 
-.main__header--img {
+.logo__img {
     display: block;
-    width: 300px;    
+    width: 225px;    
     margin: 0 auto;
 }
 
 @media(max-width: 300px) {
-    .main__header--img {
-        width: 200px;
+    .logo__img {
+        width: 150px;
     }
 }
 
-.main__invitation {
+.invitation {
     position: relative;      
 }
 
-.main__invitation::before{
+.invitation::before {
     content: "DÉCOUVREZ NOTRE CAFÉ PHILO";    
     position: absolute;      
     display: block;  
-    margin: 50px 0;  
+    top: 50px;
     width: 100%;
     text-align: center;
-    font-size: 36px;
+    font-size: 42px;
     font-family: "AvenirNext--bold", sans-serif;    
-    color: white;
+    color: var(--color-fontOnDarkBackground);
     text-shadow: 5px 5px 5px gray;
+    padding: 25px;
 }
 
-.main__invitation--img {
+@media(max-width: 600px) {
+    .invitation::before { 
+        font-size: 30px; 
+        top: 20px;        
+    }
+}
+
+.invitation__img {
     width: 100%;    
 }
+
+@media(max-width: 800px) {
+    .container {
+        margin: 20px;
+    }
+}
+
+.presentation__list {
+    display: grid;     
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    list-style: none;   
+    padding: 0;       
+}
+
+@media(max-width: 600px) {
+    .presentation__list {
+        grid-template-columns: minmax(200px, 300px);       
+        justify-content: center;
+    }
+}
+
+.presentation__listItem {    
+    background-color: var(--color-inner);  
+    border-radius: 2px;
+    box-shadow: -3px 3px 3px lightgray; 
+    padding: 40px 30px 30px; 
+    color: var(--color-fontOnDarkBackground);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.presentation__img {
+    width: 120px;    
+}
+
+@media(max-width: 800px) {
+    .presentation__img {
+        width: 90px;    
+    }
+}
+
+.presentation__subheader {
+    font-size: 20px;
+    text-shadow: -3px 3px 3px gray; 
+}
+
+.presentation__paragraph {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;    
+    margin: 0;
+}
+
+.presentation__moreButton {
+    display: block;
+    width: 240px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 3px lightgray; 
+    margin: 70px auto 100px;
+    padding: 20px;
+    background-color: var(--color-frame);    
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+.presentation__moreButton:hover {
+    opacity: 0.8;    
+}
+
+.events {
+    font-size: 22px;    
+}
+
+.events__img {
+    width: 100px;
+    margin: 30px;
+    display: block;    
+}
+
+@media(max-width: 600px) {
+    .events__img {
+        float: none;           
+        margin: 0 auto;        
+    }
+}
+
+.events__title {    
+    font-weight: bold;      
+}
+
+@media(max-width: 600px) {
+    .events__title {
+        text-align: center;       
+    }
+}
+
+.events__list {
+    list-style: none;   
+    padding: 0; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;    
+    text-align: center;
+    margin: 0 auto 100px;
+}
+
+@media(max-width: 600px) {
+    .events__list {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        font-size: 18px;
+        margin: 0 auto 50px;
+    }
+}
+
+.events__subitem {
+    margin: 50px 20px;
+}
+
+@media(max-width: 600px) {
+    .events__subitem {
+        margin: 30px 10px;
+    }
+}
+
+.events--attraction {
+    font-weight: bold;
+}
+
+.events__additional {
+    text-align: center;        
+}
+
+.events__callToContact {
+    max-width: 65%;
+    font-size: 26px;      
+    text-align: center;   
+    margin: 100px auto;  
+    font-weight: bold;
+}
+
+@media(max-width: 600px) {
+    .events__callToContact {
+        max-width: 100%;        
+    }
+}
+
+
+/* FOOTER */
 
 footer {
     background-color: var(--color-frame);
@@ -131,13 +329,16 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px 50px;   
-    color: white; 
+    padding: 30px 50px;   
+    color: var(--color-fontOnDarkBackground);
+    margin-top: 100px;
+    letter-spacing: 2px;
+    font-size: 14px;
 }
 
 .footer__inner {
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -146,12 +347,13 @@ footer {
 @media(max-width: 500px) {
     .footer__inner {
         grid-template-columns: 1fr;
+        grid-gap: 20px;
         justify-content: center;           
     }
 }
 
 .footer__logo--img {
-    width: 70px;    
+    width: 52px;    
     display: block;
     margin: 0 auto;  
 }
@@ -162,14 +364,15 @@ footer {
 
 .footer__socialMedia--header {
     text-align: center;
-    margin: 30px 0;
+    margin: 0 0 20px;
 }
 
 .footer__socialMediaList {
     display: flex; 
     justify-content: space-evenly;
     list-style: none;  
-    padding: 0;       
+    padding: 0;     
+    margin: 0;  
 }
 
 .footer__socialMediaList--item {
@@ -177,5 +380,5 @@ footer {
 }
 
 .footer__socialMedia--img {
-    width: 40px;    
+    width: 30px;    
 }
