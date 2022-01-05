@@ -118,8 +118,7 @@ header {
 
 /* MAIN */
 
-main {
-    /* width: 100%; */
+main {    
     max-width: 1000px;      
     margin: 0 auto;    
 }
@@ -235,7 +234,7 @@ main {
     padding: 20px;
     background-color: var(--color-frame);    
     font-size: 20px;
-    font-weight: bold; 
+    font-family: "AvenirNext--bold", sans-serif;
 }
 
 .presentation__moreButton:hover {
@@ -260,7 +259,7 @@ main {
 }
 
 .events__title {    
-    font-weight: bold;      
+    font-family: "AvenirNext--bold", sans-serif;    
 }
 
 @media(max-width: 600px) {
@@ -299,7 +298,7 @@ main {
 }
 
 .events--attraction {
-    font-weight: bold;
+    font-family: "AvenirNext--bold", sans-serif;
 }
 
 .events__additional {
@@ -311,7 +310,7 @@ main {
     font-size: 26px;      
     text-align: center;   
     margin: 100px auto;  
-    font-weight: bold;
+    font-family: "AvenirNext--bold", sans-serif;
 }
 
 @media(max-width: 600px) {
@@ -381,4 +380,26 @@ footer {
 
 .footer__socialMedia--img {
     width: 30px;    
+}
+
+
+/* CONTACT */
+
+.contact {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact__details {
+    display: block;
+    margin: 50px auto;
+    font-size: 24px;
+}
+
+.contact__map {
+    width: 100%;    
+    height: 600px;
+    border: none;
+    display: block; 
+    margin: 0 auto;   
 }
