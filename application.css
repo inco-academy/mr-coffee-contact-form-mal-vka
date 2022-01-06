@@ -1,4 +1,4 @@
-/* GLOBAL */
+/* ==================== GLOBAL ==================== */
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -21,7 +21,14 @@ body {
     color: var(--color-fontOnLightBackground);
     background-color: #f5f5f5ff;    
     font-family: "AvenirNext--regular", sans-serif;    
-    margin: 0;    
+    margin: 0;   
+    font-size: 22px;    
+}
+
+@media(max-width: 600px) {
+    body {
+        font-size: 20px;
+    }
 }
 
 h1 {
@@ -32,7 +39,13 @@ h2 {
     font-family: "AvenirNext--bold", sans-serif;   
     font-size: 34px;
     text-align: center;    
-    margin: 100px auto 50px;
+    margin: 50px auto;
+}
+
+@media(max-width: 600px) {
+    h2 {
+        font-size: 30px;
+    }
 }
 
 .link {
@@ -49,7 +62,7 @@ h2 {
 }
 
 
-/* HEADER */
+/* ==================== HEADER ==================== */
 
 header {
     background-color: var(--color-frame);
@@ -116,17 +129,13 @@ header {
 }
 
 
-/* MAIN */
+/* ==================== MAIN ==================== */
 
 main {    
+    min-height: calc(100vh - (236.77px + 83.42px));
     max-width: 1000px;      
     margin: 0 auto;    
 }
-
-/* .main__header {
-    width:100%;
-    margin: 0 auto;
-} */
 
 .logo__img {
     display: block;
@@ -169,8 +178,9 @@ main {
     width: 100%;    
 }
 
+
 @media(max-width: 800px) {
-    .container {
+    .presentation {
         margin: 20px;
     }
 }
@@ -222,6 +232,7 @@ main {
     line-height: 1.5;
     text-align: center;    
     margin: 0;
+    letter-spacing: 1px;
 }
 
 .presentation__moreButton {
@@ -245,26 +256,37 @@ main {
     font-size: 22px;    
 }
 
+@media(max-width: 800px) {
+    .events {
+        margin: 20px;
+    }
+}
+
+.events__titleBox {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .events__img {
     width: 100px;
     margin: 30px;
-    display: block;    
 }
 
 @media(max-width: 600px) {
-    .events__img {
-        float: none;           
+    .events__img {                
         margin: 0 auto;        
     }
 }
 
 .events__title {    
-    font-family: "AvenirNext--bold", sans-serif;    
+    font-family: "AvenirNext--bold", sans-serif;         
 }
 
 @media(max-width: 600px) {
     .events__title {
-        text-align: center;       
+        text-align: center;     
+        font-size: 24px;  
     }
 }
 
@@ -309,8 +331,7 @@ main {
     max-width: 65%;
     font-size: 26px;      
     text-align: center;   
-    margin: 100px auto;  
-    font-family: "AvenirNext--bold", sans-serif;
+    margin: 100px auto;      
 }
 
 @media(max-width: 600px) {
@@ -320,7 +341,7 @@ main {
 }
 
 
-/* FOOTER */
+/* ==================== FOOTER ==================== */
 
 footer {
     background-color: var(--color-frame);
@@ -383,23 +404,88 @@ footer {
 }
 
 
-/* CONTACT */
+/* ==================== ABOUT ==================== */
 
-.contact {
+.about__contentBox {
+    display: flex;
+    margin: 100px auto;    
+}
+
+@media(max-width: 800px) {
+    .about__contentBox {        
+        flex-wrap: wrap;        
+        justify-content: center;
+        gap: 50px;
+        margin: 0 auto;
+    }
+}
+
+.about__header {
+    text-align: left;
+    margin-top: 0;
+}
+
+@media(max-width: 800px) {
+    .about__description {
+        margin: 0 20px;
+    }
+}
+
+.about__img {
+    width: 400px;        
+}
+.about__img--right {      
+    margin: 0 0 0 50px;
+}
+
+.about__img--left {    
+    margin: 0 50px 0 0;    
+}
+
+@media(max-width: 800px) {
+    .about__img {
+        width: 100%;        
+        margin: 0 auto;   
+        order: -2;
+    }
+}
+
+
+/* ==================== CONTACT ==================== */
+
+.contact {    
     max-width: 800px;
     margin: 0 auto;
 }
 
+@media(max-width: 800px) {
+    .contact {
+        margin: 20px;
+    }
+}
+
+.contact__cafeName {
+    margin: 0;    
+    font-family: "AvenirNext--bold", sans-serif;
+}
+
 .contact__details {
-    display: block;
-    margin: 50px auto;
-    font-size: 24px;
+    display: grid;
+    grid-gap: 40px;
+    margin: 10px 0;    
 }
 
 .contact__map {
-    width: 100%;    
-    height: 600px;
-    border: none;
     display: block; 
-    margin: 0 auto;   
+    width: 100%;    
+    height: 600px;     
+    margin: 100px auto;   
+    border-style: none;
+}
+
+@media(max-width: 600px) {
+    .contact__map {
+        width: 250px;
+        height: 250px;
+    }
 }
