@@ -1,0 +1,17 @@
+main {    
+    min-height: calc(100vh - (236.77px + 83.42px));
+    max-width: 1000px;      
+    margin: 0 auto;    
+}
+
+.logo__img {
+    display: block;
+    width: 225px;    
+    margin: 0 auto;
+}
+
+@media(max-width: 300px) {
+    .logo__img {
+        width: 150px;
+    }
+}

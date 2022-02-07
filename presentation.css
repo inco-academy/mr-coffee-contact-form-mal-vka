@@ -1,0 +1,190 @@
+.invitation {
+    position: relative;      
+}
+
+.invitation::before {
+    content: "DÉCOUVREZ NOTRE CAFÉ PHILO";    
+    position: absolute;      
+    display: block;  
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 42px;
+    font-family: "AvenirNext--bold", sans-serif;    
+    color: var(--color-fontOnDarkBackground);
+    text-shadow: 5px 5px 5px gray;
+    padding: 25px;
+}
+
+@media(max-width: 600px) {
+    .invitation::before { 
+        font-size: 30px; 
+        top: 20px;        
+    }
+}
+
+.invitation__img {
+    width: 100%;    
+}
+
+
+@media(max-width: 800px) {
+    .presentation {
+        margin: 20px;
+    }
+}
+
+.presentation__list {
+    display: grid;     
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    list-style: none;   
+    padding: 0;       
+}
+
+@media(max-width: 600px) {
+    .presentation__list {
+        grid-template-columns: minmax(200px, 300px);       
+        justify-content: center;
+    }
+}
+
+.presentation__listItem {    
+    background-color: var(--color-inner);  
+    border-radius: 2px;
+    box-shadow: -3px 3px 3px lightgray; 
+    padding: 40px 30px 30px; 
+    color: var(--color-fontOnDarkBackground);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.presentation__img {
+    width: 120px;    
+}
+
+@media(max-width: 800px) {
+    .presentation__img {
+        width: 90px;    
+    }
+}
+
+.presentation__subheader {
+    font-size: 20px;
+    text-shadow: -3px 3px 3px gray; 
+}
+
+.presentation__paragraph {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;    
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.presentation__moreButton {
+    display: block;
+    width: 240px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 3px lightgray; 
+    margin: 70px auto 100px;
+    padding: 20px;
+    background-color: var(--color-frame);    
+    font-size: 20px;
+    font-family: "AvenirNext--bold", sans-serif;
+}
+
+.presentation__moreButton:hover {
+    opacity: 0.8;    
+}
+
+.events {
+    font-size: 22px;    
+}
+
+@media(max-width: 800px) {
+    .events {
+        margin: 20px;
+    }
+}
+
+.events__titleBox {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.events__img {
+    width: 100px;
+    margin: 30px;
+}
+
+@media(max-width: 600px) {
+    .events__img {                
+        margin: 0 auto;        
+    }
+}
+
+.events__title {    
+    font-family: "AvenirNext--bold", sans-serif;         
+}
+
+@media(max-width: 600px) {
+    .events__title {
+        text-align: center;     
+        font-size: 24px;  
+    }
+}
+
+.events__list {
+    list-style: none;   
+    padding: 0; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;    
+    text-align: center;
+    margin: 0 auto 100px;
+}
+
+@media(max-width: 600px) {
+    .events__list {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        font-size: 18px;
+        margin: 0 auto 50px;
+    }
+}
+
+.events__subitem {
+    margin: 50px 20px;
+}
+
+@media(max-width: 600px) {
+    .events__subitem {
+        margin: 30px 10px;
+    }
+}
+
+.events--attraction {
+    font-family: "AvenirNext--bold", sans-serif;
+}
+
+.events__additional {
+    text-align: center;        
+}
+
+.events__callToContact {
+    max-width: 65%;
+    font-size: 26px;      
+    text-align: center;   
+    margin: 100px auto;      
+}
+
+@media(max-width: 600px) {
+    .events__callToContact {
+        max-width: 100%;        
+    }
+}

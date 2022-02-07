@@ -1,0 +1,43 @@
+.about__contentBox {
+    display: flex;
+    margin: 100px auto;    
+}
+
+@media(max-width: 800px) {
+    .about__contentBox {        
+        flex-wrap: wrap;        
+        justify-content: center;
+        gap: 50px;
+        margin: 0 auto;
+    }
+}
+
+.about__header {
+    text-align: left;
+    margin-top: 0;
+}
+
+@media(max-width: 800px) {
+    .about__description {
+        margin: 0 20px;
+    }
+}
+
+.about__img {
+    width: 400px;        
+}
+.about__img--right {      
+    margin: 0 0 0 50px;
+}
+
+.about__img--left {    
+    margin: 0 50px 0 0;    
+}
+
+@media(max-width: 800px) {
+    .about__img {
+        width: 100%;        
+        margin: 0 auto;   
+        order: -2;
+    }
+}
