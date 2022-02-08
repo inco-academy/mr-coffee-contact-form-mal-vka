@@ -60,3 +60,23 @@ h2 {
 .link:hover {
     text-decoration: underline;            
 }
+
+.button {
+    display: block;
+    width: 240px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 3px lightgray; 
+    margin: 70px auto 100px;
+    padding: 20px;
+    background-color: var(--color-frame);    
+    color: var(--color-fontOnDarkBackground);
+    font-size: 20px;
+    font-family: "AvenirNext--bold", sans-serif;
+    font-weight: bold;   
+    letter-spacing: 1.5px; 
+}
+
+.button:hover {
+    opacity: 0.8;    
+}
