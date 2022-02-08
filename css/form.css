@@ -1,0 +1,41 @@
+.contactForm {    
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media(max-width: 800px) {
+    .contactForm {
+        margin: 20px;
+    }
+}
+
+.contactForm__paragraph {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.contactForm__label {
+    letter-spacing: 1.5px;
+}
+
+.contactForm__field {
+    background-color: var(--color-inner);  
+    border: none;
+    line-height: 1.5;
+    margin: 15px 0;
+    padding: 10px 15px;
+}
+
+.contactForm__field--textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.contactForm__field::placeholder {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}

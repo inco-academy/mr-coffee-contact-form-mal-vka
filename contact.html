@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
 
@@ -58,6 +59,34 @@
             <img class="logo__img" src="assets/logo_mrcoffee.png" alt="big cafe's logo">
         </h1>
 
+        <form class="contactForm">
+            <h2 class="contact__header">Dites nous tout&nbsp;!</h2>
+            <p class="contactForm__paragraph">
+                <label class="contactForm__label" for="surname">Nom *</label>
+                <input class="contactForm__field" id="surname" name="lastName" required>
+            </p>
+            <p class="contactForm__paragraph">
+                <label class="contactForm__label" for="name">Prénom *</label>
+                <input class="contactForm__field" id="name" name="firstName" required>
+            </p>
+            <p class="contactForm__paragraph">
+                <label class="contactForm__label" for="phone">Téléphone</label>
+                <input class="contactForm__field" id="phone" type="tel" name="phone">
+            </p>
+            <p class="contactForm__paragraph">
+                <label class="contactForm__label" for="email">Adresse mail *</label>
+                <input class="contactForm__field" id="email" type="email" name="email" required>
+            </p>
+            <p class="contactForm__paragraph">
+                <label class="contactForm__label" for="message">Message *</label>
+                <textarea class="contactForm__field contactForm__field--textarea" id="message" name="message"
+                    placeholder="Tapez votre message ici" required></textarea>
+            </p>
+            <p class="contactForm__paragraph">
+                <button class="button js-formButton">ENVOYER</button>
+            </p>
+        </form>
+
         <section class="contact">
             <h2 class="contact__header">On vous attend&nbsp;!</h2>
             <h3 class="contact__cafeName">Mr.Coffee</h3>
@@ -68,7 +97,8 @@
                     75006 Paris
                 </div>
                 <div class="contact__mediated">
-                    Tel&nbsp;: <a class="link link--onLightBackground" href="tel:+33946257845">+33 9 46 25 78 45</a><br>
+                    Tel&nbsp;: <a class="link link--onLightBackground" href="tel:+33946257845">+33 9 46 25 78
+                        45</a><br>
                     Mail&nbsp;: <a class="link link--onLightBackground" href="mailto:contact@mr-coffee.com">
                         contact@mr-coffee.com</a>
                 </div>
