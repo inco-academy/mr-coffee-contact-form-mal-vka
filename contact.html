@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/modal.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contactUs.css">
     <link rel="stylesheet" href="css/footer.css">
 
     <script defer src="js/form.js"></script>
@@ -64,11 +64,11 @@
             <h2 class="contact__header">Dites nous tout&nbsp;!</h2>
             <p class="contactForm__paragraph">
                 <label class="contactForm__label" for="surname">Nom *</label>
-                <input class="contactForm__field js-lastName" id="surname" name="lastName" required>
+                <input class="contactForm__field js-lastName" id="surname" name="lastName">
             </p>
             <p class="contactForm__paragraph">
                 <label class="contactForm__label" for="name">Prénom *</label>
-                <input class="contactForm__field js-firstName" id="name" name="firstName" required>
+                <input class="contactForm__field js-firstName" id="name" name="firstName">
             </p>
             <p class="contactForm__paragraph">
                 <label class="contactForm__label" for="phone">Téléphone</label>
@@ -76,19 +76,19 @@
             </p>
             <p class="contactForm__paragraph">
                 <label class="contactForm__label" for="email">Adresse mail *</label>
-                <input class="contactForm__field js-emailAddress" id="email" type="email" name="email" required>
+                <input class="contactForm__field js-emailAddress" id="email" type="email" name="email">
             </p>
             <p class="contactForm__paragraph">
                 <label class="contactForm__label" for="message">Message *</label>
                 <textarea class="contactForm__field contactForm__field--textarea js-message" id="message" name="message"
-                    placeholder="Tapez votre message ici" required></textarea>
+                    placeholder="Tapez votre message ici"></textarea>
             </p>
             <p class="contactForm__paragraph">
-                <button class="button js-formButton">ENVOYER</button>
+                <button class="button">ENVOYER</button>
             </p>
         </form>
 
-        <div class="modal__contener modal hidden">
+        <div class="modal hidden js-modal">
             <img class="modal__img" src="assets/logo_dark.png" alt="cafe's logo">
             <h2 class="modal__header">MERCI<br><br>
                 Votre message a bien été envoyé&nbsp;!
@@ -96,19 +96,19 @@
             <p class="modal__paragraph">
                 Nous essaierons d’y répondre au mieux dans les plus brefs délais. À bientot chez Mr.Coffee
             </p>
-            <button class="button">FERMER</button>
+            <button class="button js-closeButton">FERMER</button>
         </div>
 
-        <section class="contact">
-            <h2 class="contact__header">On vous attend&nbsp;!</h2>
+        <section class="contactUs">
+            <h2 class="contactUs__header">On vous attend&nbsp;!</h2>
             <h3 class="contact__cafeName">Mr.Coffee</h3>
 
-            <adress class="contact__details">
-                <div class="contact__address">
+            <adress class="contactUs__details">
+                <div class="contactUs__address">
                     15 place Jules Guesde<br>
                     75006 Paris
                 </div>
-                <div class="contact__mediated">
+                <div class="contactUs__mediated">
                     Tel&nbsp;: <a class="link link--onLightBackground" href="tel:+33946257845">+33 9 46 25 78
                         45</a><br>
                     Mail&nbsp;: <a class="link link--onLightBackground" href="mailto:contact@mr-coffee.com">
@@ -116,12 +116,12 @@
                 </div>
             </adress>
 
-            <iframe class="contact__map"
+            <iframe class="contactUs__map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d552.0729776163778!2d2.3202916051659916!3d48.83691739328176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b5590a00b1%3A0x2711ee015c1c2b2e!2s15%20Rue%20Jules%20Guesde%2C%2075014%20Paris%2C%20Francja!5e0!3m2!1spl!2spl!4v1641408092268!5m2!1spl!2spl">
             </iframe>
         </section>
 
-        <div class="overlay hidden"></div>
+        <div class="overlay hidden js-overlay"></div>
     </main>
 
     <footer class="footer">
