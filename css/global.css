@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: "AvenirNext--regular";       
-    src:url("../assets/avenir-next/AvenirNextLTPro-Regular.otf")        
+    src: url("../assets/avenir-next/AvenirNextLTPro-Regular.otf")        
 }
 @font-face {
     font-family: "AvenirNext--bold";       
-    src:url("../assets/avenir-next/AvenirNextLTPro-Bold.otf")        
+    src: url("../assets/avenir-next/AvenirNextLTPro-Bold.otf")        
 }
 
 body {    
@@ -24,9 +24,9 @@ body {
     position: relative;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 769px) {
     body {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -41,9 +41,10 @@ h2 {
     margin: 50px auto;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 600px), (max-height: 1000px) {
     h2 {
         font-size: 30px;
+        margin: 30px auto;
     }
 }
 

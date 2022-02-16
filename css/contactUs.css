@@ -1,10 +1,10 @@
 .contactUs {    
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto;    
 }
 
-@media(max-width: 800px) {
-    .contact {
+@media(max-width: 900px) {
+    .contactUs {
         margin: 20px;
     }
 }
