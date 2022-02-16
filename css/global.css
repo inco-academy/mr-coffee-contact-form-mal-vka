@@ -1,16 +1,14 @@
-/* ==================== GLOBAL ==================== */
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 @font-face {
     font-family: "AvenirNext--regular";       
-    src:url("assets/avenir-next/AvenirNextLTPro-Regular.otf")        
+    src:url("../assets/avenir-next/AvenirNextLTPro-Regular.otf")        
 }
 @font-face {
     font-family: "AvenirNext--bold";       
-    src:url("assets/avenir-next/AvenirNextLTPro-Bold.otf")        
+    src:url("../assets/avenir-next/AvenirNextLTPro-Bold.otf")        
 }
 
 body {    
